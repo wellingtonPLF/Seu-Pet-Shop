@@ -1,0 +1,21 @@
+<div class="toolbar">
+  <div style="display:flex; align-items: center; padding-left: 10px;">
+    <button mat-icon-button [routerLink]="['']">
+      <mat-icon aria-hidden="false" aria-label="pets icon" class="icon">pets</mat-icon>
+    </button>
+    <mat-label style="padding-left: 10px; color: white;">Seu Pet Shop</mat-label>
+  </div>
+
+  <button mat-icon-button>
+    <mat-icon class= "icon">search</mat-icon>
+  </button>
+
+  <button mat-icon-button>
+    <mat-icon class="icon">shopping_cart</mat-icon>
+  </button>
+
+  <div>
+    <button mat-button style="margin-right:10px; background-color: white;" [routerLink]="['/listar']">Listar Usuario</button>
+    <button mat-button style="background-color: white;" [routerLink]="['/cadastrar']">Cadastrar Usuario</button>
+  </div>
+</div>

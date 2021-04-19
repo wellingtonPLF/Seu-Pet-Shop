@@ -1,0 +1,12 @@
+.toolbar {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  grid-template-rows: 50px;
+  grid-template-columns: 62% 5% 5% auto;
+  background-color: #1976d2;
+  overflow-x: hidden;
+}
+.icon{
+  color: white;
+}
