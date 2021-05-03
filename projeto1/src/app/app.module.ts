@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MenuModule} from './menu/menu.module';
@@ -15,6 +16,7 @@ import {MainModule} from './main/main.module';
 import {MatCardModule} from '@angular/material/card';
 import {UsuarioModule} from './usuario/usuario.module';
 import {HttpClientModule} from '@angular/common/http';
+import {FirestoreModule} from './firestore/firestore.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatCardModule,
     MainModule,
     UsuarioModule,
-    HttpClientModule
+    HttpClientModule,
+    FirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

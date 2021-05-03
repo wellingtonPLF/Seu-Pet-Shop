@@ -1,4 +1,4 @@
-<div style="height: 80%;">
+<div style="height: 80%; display: flex; align-items: center; justify-content: center;">
   <mat-card class="card-insercao-usuario">
     <mat-card-header>
       <mat-card-title>Inserir Usuário</mat-card-title>
@@ -20,8 +20,8 @@
       </mat-form-field>
     </mat-card-content>
     <mat-card-footer>
-      <button style="width: 100%;" (click)="inserirUsuario()">
-        <mat-icon>add</mat-icon>
+      <button class="btnAdd" (click)="inserirUsuario()">
+        <div class="textStyle">Adicionar</div>
       </button>
     </mat-card-footer>
   </mat-card>

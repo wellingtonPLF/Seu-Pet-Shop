@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {MatDialog} from '@angular/material/dialog';
+import {DialogCartComponent} from '../dialog-cart/dialog-cart.component';
 
 @Component({
   selector: 'app-main-menu',
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
 
+  openDialog(): void {
+    this.dialog.open(DialogCartComponent, {
+      backdropClass: 'backdropBackground'
+    });
+  }
   ngOnInit(): void {
   }
-
 }

@@ -6,11 +6,14 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {RouterModule} from '@angular/router';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogCartComponent } from './dialog-cart/dialog-cart.component';
 
 
 @NgModule({
     declarations: [
-        MainMenuComponent
+        MainMenuComponent,
+        DialogCartComponent
     ],
     exports: [
         MainMenuComponent
@@ -21,6 +24,7 @@ import {RouterModule} from '@angular/router';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatButtonModule,
+    MatDialogModule,
     RouterModule
   ]
 })

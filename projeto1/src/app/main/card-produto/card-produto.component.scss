@@ -1,13 +1,13 @@
 .produtos_venda{
-  box-shadow: 0.1px 0.1px 2px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0.1px 0.1px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   margin: 15px;
-  background-color: #3f6885;
+  background-color: #b74562;
   width: 300px;
   height: 200px;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 40% 1fr;
   grid-template-areas:
     "imgProduto descricao "
     "cartAdd cartAdd";
@@ -28,6 +28,10 @@
   color: white;
   margin-top: 20px;
   grid-area: descricao;
+}
+
+.descricao p{
+  padding-left: 15px;
 }
 
 .cartAdd{

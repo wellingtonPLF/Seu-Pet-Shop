@@ -3,14 +3,14 @@
     <button mat-icon-button [routerLink]="['']">
       <mat-icon aria-hidden="false" aria-label="pets icon" class="icon">pets</mat-icon>
     </button>
-    <mat-label style="padding-left: 10px; color: white;">Seu Pet Shop</mat-label>
+    <mat-label class="seuPet">Seu Pet Shop</mat-label>
   </div>
 
   <button mat-icon-button>
     <mat-icon class= "icon">search</mat-icon>
   </button>
 
-  <button mat-icon-button>
+  <button mat-icon-button (click)="openDialog()">
     <mat-icon class="icon">shopping_cart</mat-icon>
   </button>
 

@@ -1,16 +1,16 @@
-<div class="produtos_venda">
-  <div class="imgProduto">
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-  </div>
-  <div class="descricao">
-    <p>Hello World!</p>
-    <ul>
-      <li>Barato</li>
-      <li>Para Gatos</li>
-      <li>Muito Bom</li>
-    </ul>
-  </div>
-  <div class="cartAdd">
-    <button mat-button>Cart Add</button>
+<div style="display: flex;  flex-wrap: wrap;" *ngFor="let produto of produtos">
+  <div class="produtos_venda">
+    <div class="imgProduto">
+      <img mat-card-image src="assets/img/{{produto.imagem}}">
+    </div>
+    <div class="descricao">
+      <p>{{produto.nome}}</p>
+      <ul style="margin-bottom: 2px;" *ngFor="let listQ of produto.qualityList">
+        <li>{{listQ}}</li>
+      </ul>
+    </div>
+    <div class="cartAdd" (click)="inserirNoCart(produto)">
+      <button mat-button>Cart Add</button>
+    </div>
   </div>
 </div>

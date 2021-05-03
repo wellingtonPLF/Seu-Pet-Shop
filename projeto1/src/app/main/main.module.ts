@@ -9,6 +9,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { CarouselSliderComponent } from './carousel-slider/carousel-slider.component';
 import {MatCardModule} from '@angular/material/card';
 import { CardProdutoComponent } from './card-produto/card-produto.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CardProdutoComponent } from './card-produto/card-produto.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ]
 })export class MainModule { }

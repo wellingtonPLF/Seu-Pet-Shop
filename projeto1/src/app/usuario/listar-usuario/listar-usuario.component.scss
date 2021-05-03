@@ -1,9 +1,15 @@
 .mat-card-simples{
   max-width: 300px;
-  background-color: black;
+  background-color: #f35b5b;
   margin-top: 10px;
 }
 
 .mat-form-simples {
   margin-left:5px;
+}
+
+.cardListStyle{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
