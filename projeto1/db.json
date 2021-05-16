@@ -84,26 +84,6 @@
         "Selo de Garantia!"
       ],
       "id": 3
-    },
-    {
-      "imagem": "img1.png",
-      "nome": "Ração Pedigree",
-      "qualityList": [
-        "Qualidade 100%",
-        "Otimo Produto",
-        "Selo de Garantia!"
-      ],
-      "id": 4
-    },
-    {
-      "imagem": "img2.png",
-      "nome": "Ração DogShow",
-      "qualityList": [
-        "Qualidade 100%",
-        "Otimo Produto",
-        "Selo de Garantia!"
-      ],
-      "id": 5
     }
   ]
 }

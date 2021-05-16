@@ -31,18 +31,38 @@
   padding-left: 15px;
 }
 
-.delete{
+.delete_count{
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.delete_count div:first-child{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+  margin: 20px 13px 0px 0px;
+}
+
+.delete_count p:first-child{
+  width: 30%;
+  border: 2px dotted #000;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.delete_count :nth-child(2){
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  margin: 0px 12px 12px 0px;
 }
 
-.delete button{
+.delete_count button{
   border-radius: 5px;
   color:white;
   background-color: #d41343;
-  margin-bottom: 12px;
-  margin-right: 12px;
 }
