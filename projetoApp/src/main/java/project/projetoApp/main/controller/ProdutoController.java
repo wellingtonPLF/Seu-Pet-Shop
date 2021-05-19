@@ -1,7 +1,7 @@
 package project.projetoApp.main.controller;
 
-import project.projetoApp.main.model.Usuario;
-import project.projetoApp.main.service.UsuarioService;
+import project.projetoApp.main.model.Produto;
+import project.projetoApp.main.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,18 +13,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/")
-public class UsuarioController {
+public class ProdutoController {
 
    @Autowired
-   private UsuarioService usuarioService;
+   private ProdutoService usuarioService;
 
-   @GetMapping("/usuarios")
-   public List<Usuario> getUsuarios() {
-       return this.usuarioService.getUsuarios();
+   @GetMapping("/produtos")
+   public List<Produto> getProdutos() {
+       return this.usuarioService.getProdutos();
    }
 
-   @PostMapping("/usuarios")
-   public Usuario inserirUsuario(@RequestBody Usuario usuario){
-       return this.usuarioService.inserirUser(usuario);
+   @PostMapping("/produtos")
+   public Produto inserirProduto(@RequestBody Produto produto){
+       return this.usuarioService.inserirProduto(produto);
    }
 }
