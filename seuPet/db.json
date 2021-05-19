@@ -29,7 +29,8 @@
     {
       "imagem": "img1.png",
       "nome": "Ração Pedigree",
-      "qualityList": [
+      "preco": 10,
+      "descricao": [
         "Qualidade 100%",
         "Otimo Produto",
         "Selo de Garantia!"
@@ -38,7 +39,8 @@
     {
       "imagem": "img2.png",
       "nome": "Ração DogShow",
-      "qualityList": [
+      "preco": 11,
+      "descricao": [
         "Qualidade 100%",
         "Otimo Produto",
         "Selo de Garantia!"
@@ -47,7 +49,8 @@
     {
       "imagem": "img3.png",
       "nome": "Ração Premier",
-      "qualityList": [
+      "preco": 12,
+      "descricao": [
         "Qualidade 100%",
         "Otimo Produto",
         "Selo de Garantia!"
@@ -58,7 +61,8 @@
     {
       "imagem": "img1.png",
       "nome": "Ração Pedigree",
-      "qualityList": [
+      "preco": 10,
+      "descricao": [
         "Qualidade 100%",
         "Otimo Produto",
         "Selo de Garantia!"
@@ -68,7 +72,8 @@
     {
       "imagem": "img2.png",
       "nome": "Ração DogShow",
-      "qualityList": [
+      "preco": 11,
+      "descricao": [
         "Qualidade 100%",
         "Otimo Produto",
         "Selo de Garantia!"
@@ -78,7 +83,8 @@
     {
       "imagem": "img3.png",
       "nome": "Ração Premier",
-      "qualityList": [
+      "preco": 12,
+      "descricao": [
         "Qualidade 100%",
         "Otimo Produto",
         "Selo de Garantia!"
