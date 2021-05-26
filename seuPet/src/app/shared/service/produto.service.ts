@@ -25,4 +25,8 @@ export class ProdutoService {
   inserir(produto: Produto): Observable<Produto>{
     return this.httpClient.post<Produto>(this.URL_PRODUTOSCART, produto);
   }
+
+  remover(id: number): Observable<object> {
+    return this.httpClient.delete(`${this.URL_PRODUTOSCART}/${id}`);
+  }
 }

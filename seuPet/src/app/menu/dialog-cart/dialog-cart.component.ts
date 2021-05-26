@@ -19,4 +19,13 @@ export class DialogCartComponent implements OnInit {
       produtos => this.cart = produtos
     );
   }
+
+  removerProduto(produto: Produto): void {
+    this.produtoService.remover(produto.id).subscribe(
+      produt => {
+        const index = this.cart.findIndex(p => p.nome === produto.nome);
+        this.cart.splice(index, 1);
+      }
+    );
+  }
 }

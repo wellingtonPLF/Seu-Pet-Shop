@@ -10,6 +10,7 @@ import { CarouselSliderComponent } from './carousel-slider/carousel-slider.compo
 import {MatCardModule} from '@angular/material/card';
 import { CardProdutoComponent } from './card-produto/card-produto.component';
 import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,16 +20,18 @@ import {FormsModule} from '@angular/forms';
   ],
   exports: [
     MainLayoutComponent,
-    CarouselSliderComponent
+    CarouselSliderComponent,
+    CardProdutoComponent
   ],
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatIconModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatCardModule,
-    FormsModule
-  ]
+    imports: [
+        CommonModule,
+        MatButtonModule,
+        MatIconModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatMenuModule,
+        MatCardModule,
+        FormsModule,
+        RouterModule
+    ]
 })export class MainModule { }

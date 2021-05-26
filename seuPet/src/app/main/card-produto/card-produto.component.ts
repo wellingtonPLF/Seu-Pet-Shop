@@ -19,9 +19,18 @@ export class CardProdutoComponent implements OnInit {
       produtos => this.produtos = produtos
     );
   }
+
   inserirNoCart(produto: Produto): void {
-    this.produtoService.inserir(produto).subscribe(
-        produt => console.log(produt)
+    this.produtoService.listarCart().subscribe(
+      produtos => {
+        if (produtos.find(e => e.id === produto.id)){
+            console.log(`It's already on database!`);
+        }
+        else{
+          this.produtoService.inserir(produto).subscribe(
+            produt => console.log());
+        }
+      }
     );
   }
 }

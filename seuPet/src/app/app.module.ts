@@ -17,6 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import {UsuarioModule} from './usuario/usuario.module';
 import {HttpClientModule} from '@angular/common/http';
 import {FirestoreModule} from './firestore/firestore.module';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [

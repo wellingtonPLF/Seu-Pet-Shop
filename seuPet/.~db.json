@@ -60,17 +60,5 @@
       ]
     }
   ],
-  "cart": [
-    {
-      "id": 3,
-      "imagem": "img3.png",
-      "nome": "Ração Premier",
-      "preco": 12,
-      "descricao": [
-        "Qualidade 100%",
-        "Otimo Produto",
-        "Selo de Garantia!"
-      ]
-    }
-  ]
+  "cart": []
 }

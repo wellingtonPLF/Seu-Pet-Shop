@@ -1,9 +1,10 @@
 #myCarousel{
   width: 90%;
   height: 400px;
-  margin-left: 5%;
-  margin-top: 3%;
   background: #777;
+  min-width: 800px;
+  max-width: 1200px;
+  margin: 25px auto 15px auto;
 }
 
 .carousel-item img{
