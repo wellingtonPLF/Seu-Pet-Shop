@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import {ProdutoService} from '../../shared/service/produto.service';
+import {ItemService} from '../../shared/service/item.service';
 import {Produto} from '../../shared/model/produto';
+import {Item} from '../../shared/model/item';
+import {ItemFirestoreService} from '../../shared/service/item-firestore.service';
 
 @Component({
   selector: 'app-dialog-cart',
@@ -10,21 +12,32 @@ import {Produto} from '../../shared/model/produto';
 })
 export class DialogCartComponent implements OnInit {
 
-  cart!: Array<Produto>;
+  cart!: Array<Item>;
 
-  constructor(private produtoService: ProdutoService) {}
+  constructor(private itemService: ItemService) {}
 
   ngOnInit(): void {
-    this.produtoService.listarCart().subscribe(
+    this.itemService.listar().subscribe(
       produtos => this.cart = produtos
     );
   }
 
   removerProduto(produto: Produto): void {
-    this.produtoService.remover(produto.id).subscribe(
-      produt => {
-        const index = this.cart.findIndex(p => p.nome === produto.nome);
-        this.cart.splice(index, 1);
+    this.itemService.pesquisarPorId(produto.id.toString()).subscribe(
+      item => {
+        if (item.qnt > 1){
+            this.itemService.atualizar(item, new Item(item.id, item.qnt - 1, produto)).subscribe(
+              it => console.log()
+            );
+            this.cart[this.cart.findIndex(x => x.id === item.id)].qnt = item.qnt - 1;
+        }
+        else{
+          this.itemService.remover(produto.id.toString()).subscribe(
+            produt => {
+              const index = this.cart.findIndex(p => p.produto === produto);
+              this.cart.splice(index, 1);
+            });
+        }
       }
     );
   }

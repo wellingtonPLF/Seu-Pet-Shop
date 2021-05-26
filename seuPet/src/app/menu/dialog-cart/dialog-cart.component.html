@@ -5,23 +5,23 @@
     <mat-icon>pets</mat-icon>
   </div>
   <mat-dialog-content class="mat-typography">
-    <div *ngFor="let produto of cart">
+    <div *ngFor="let item of cart">
       <div class="produtos_venda">
         <div>
-          <img class="imgProduto" mat-card-image src="assets/img/{{produto.imagem}}">
+          <img class="imgProduto" mat-card-image src="assets/img/{{item.produto.imagem}}">
         </div>
         <div class="descricao">
-          <p>{{produto.nome}}</p>
-          <ul style="margin-bottom: 2px;" *ngFor="let listQ of produto.descricao">
+          <p>{{item.produto.nome}}</p>
+          <ul style="margin-bottom: 2px;" *ngFor="let listQ of item.produto.descricao">
             <li>{{listQ}}</li>
           </ul>
         </div>
         <div class="delete_count">
           <div>
-            <p>1</p>
+            <p>{{item.qnt}}</p>
           </div>
           <div>
-            <button mat-button (click)="removerProduto(produto)">
+            <button mat-button (click)="removerProduto(item.produto)">
               <mat-icon>delete_outline</mat-icon>
             </button>
           </div>

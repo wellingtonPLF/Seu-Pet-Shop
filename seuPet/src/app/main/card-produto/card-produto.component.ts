@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Produto} from '../../shared/model/produto';
 import {ProdutoService} from '../../shared/service/produto.service';
+import {ItemService} from '../../shared/service/item.service';
+import {Item} from '../../shared/model/item';
+import {ProdutoFirestoreService} from '../../shared/service/produto-firestore.service';
+import {ItemFirestoreService} from '../../shared/service/item-firestore.service';
 
 @Component({
   selector: 'app-card-produto',
@@ -11,7 +15,7 @@ export class CardProdutoComponent implements OnInit {
 
   produtos!: Array<Produto>;
 
-  constructor(private produtoService: ProdutoService) {
+  constructor(private produtoService: ProdutoFirestoreService, private itemService: ItemService) {
   }
 
   ngOnInit(): void {
@@ -21,13 +25,18 @@ export class CardProdutoComponent implements OnInit {
   }
 
   inserirNoCart(produto: Produto): void {
-    this.produtoService.listarCart().subscribe(
-      produtos => {
-        if (produtos.find(e => e.id === produto.id)){
+    this.itemService.listar().subscribe(
+    itens => {
+        if (itens.find(e => e.id === produto.id.toString())){
+            this.itemService.pesquisarPorId(produto.id.toString()).subscribe(
+              item => this.itemService.atualizar(item, new Item(item.id, item.qnt + 1 , produto)).subscribe(
+                it => console.log()
+              )
+            );
             console.log(`It's already on database!`);
         }
         else{
-          this.produtoService.inserir(produto).subscribe(
+          this.itemService.inserir(new Item(produto.id.toString(), 1, produto)).subscribe(
             produt => console.log());
         }
       }
