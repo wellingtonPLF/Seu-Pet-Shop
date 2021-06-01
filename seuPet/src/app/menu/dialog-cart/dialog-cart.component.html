@@ -21,7 +21,7 @@
             <p>{{item.qnt}}</p>
           </div>
           <div>
-            <button mat-button (click)="removerProduto(item.produto)">
+            <button mat-button (click)="removerProduto(item)">
               <mat-icon>delete_outline</mat-icon>
             </button>
           </div>
@@ -30,6 +30,7 @@
     </div>
   </mat-dialog-content>
   <mat-dialog-actions align="end">
+    <button mat-button style="background-color: #006973; color: white">Confirmar Pedido</button>
     <button mat-button mat-dialog-close style="background-color: #e2d9d9">Sair</button>
   </mat-dialog-actions>
 </div>

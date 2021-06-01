@@ -15,7 +15,7 @@ export class CardProdutoComponent implements OnInit {
 
   produtos!: Array<Produto>;
 
-  constructor(private produtoService: ProdutoFirestoreService, private itemService: ItemService) {
+  constructor(private produtoService: ProdutoFirestoreService, private itemService: ItemFirestoreService) {
   }
 
   ngOnInit(): void {
@@ -25,21 +25,28 @@ export class CardProdutoComponent implements OnInit {
   }
 
   inserirNoCart(produto: Produto): void {
-    this.itemService.listar().subscribe(
-    itens => {
-        if (itens.find(e => e.id === produto.id.toString())){
-            this.itemService.pesquisarPorId(produto.id.toString()).subscribe(
-              item => this.itemService.atualizar(item, new Item(item.id, item.qnt + 1 , produto)).subscribe(
-                it => console.log()
-              )
+    this.itemService.inserir(new Item(produto.id.toString(), 1, produto)).subscribe(
+      produt => console.log('Inserido')
+    );
+    /*this.itemService.pesquisarPorProduto(produto).subscribe(
+      (data) => {
+        if (data[0] !== undefined){
+          data.map(e => {
+            const id = e.payload.doc.id;
+            console.log('Tá na lista: ', id);
+            this.itemService.pesquisarPorId(id).subscribe(
+              item => {
+                this.itemService.atualizar(item, new Item(item.id, item.qnt + 1, item.produto));
+              }
             );
-            console.log(`It's already on database!`);
+          });
         }
         else{
           this.itemService.inserir(new Item(produto.id.toString(), 1, produto)).subscribe(
-            produt => console.log());
+            produt => console.log('Inserido')
+          );
         }
       }
-    );
+    );*/
   }
 }
