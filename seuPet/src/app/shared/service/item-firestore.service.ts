@@ -31,9 +31,9 @@ export class ItemFirestoreService {
     return from(this.colecaoItem.doc(id).delete());
   }
 
-  pesquisarPorId(id: string): Observable<Item> {
+  /*pesquisarPorId(id: string): Observable<Item> {
     return this.colecaoItem.doc(id).get().pipe(map(document => new Item(document.id, document.get('qnt'), document.get('produto'))));
-  }
+  }*/
 
   atualizar(item: Item, it: Item): Observable<void> {
     // @ts-ignore
@@ -41,9 +41,15 @@ export class ItemFirestoreService {
     return from(this.colecaoItem.doc(item.id).update(Object.assign({}, it)));
   }
 
-  pesquisarPorProduto(produto: Produto): Observable<DocumentChangeAction<Item>[]>{
+  /*pesquisarPorProduto(produto: Produto): Observable<DocumentChangeAction<Item>[]>{
     let doc: AngularFirestoreCollection<Item>;
     doc = this.afs.collection(this.NOME_COLECAO, ref => ref.where('produto', '==', produto));
     return doc.snapshotChanges();
+  }*/
+
+  pesquisarPorProduto(produto: Produto): Observable<Item[]> {
+    let itens: AngularFirestoreCollection<Item>;
+    itens = this.afs.collection(this.NOME_COLECAO);
+    return itens.valueChanges({idField: 'id'}).pipe(map(i => i.filter(it => it.produto.id.toString() === produto.id.toString())));
   }
 }

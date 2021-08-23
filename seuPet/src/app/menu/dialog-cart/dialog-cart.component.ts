@@ -23,7 +23,6 @@ export class DialogCartComponent implements OnInit {
   }
 
   removerProduto(item: Item): void {
-    console.log('Removendo');
     if (item.qnt > 1){
         this.itemService.atualizar(item, new Item(item.id, item.qnt - 1, item.produto)).subscribe(
           it => console.log()
@@ -31,7 +30,6 @@ export class DialogCartComponent implements OnInit {
         this.cart[this.cart.findIndex(x => x.id === item.id)].qnt = item.qnt - 1;
     }
     else{
-      console.log(item);
       this.itemService.remover(item.id).subscribe(
         produt => console.log());
       const index = this.cart.findIndex(p => p.id === item.id);

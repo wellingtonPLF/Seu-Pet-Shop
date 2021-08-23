@@ -60,51 +60,5 @@
       ]
     }
   ],
-  "cart": [
-    {
-      "id": "PdtKpQjpKsCZy8Yr0RFf",
-      "qnt": 1,
-      "produto": {
-        "imagem": "img1.png",
-        "preco": 10,
-        "id": "PdtKpQjpKsCZy8Yr0RFf",
-        "descricao": [
-          "Qualidade 100%",
-          "Otimo Produto",
-          "Selo de Garantia!"
-        ],
-        "nome": "Ração Pedigree"
-      }
-    },
-    {
-      "id": "exzu2FFK4hJu4lXmdh2o",
-      "qnt": 1,
-      "produto": {
-        "id": "exzu2FFK4hJu4lXmdh2o",
-        "imagem": "img3.png",
-        "descricao": [
-          "Qualidade 100%",
-          "Otimo Produto",
-          "Selo de Garantia!"
-        ],
-        "nome": "Ração Premier",
-        "preco": 12
-      }
-    },
-    {
-      "id": "mRu5drSIIsy5Y2K1XVSj",
-      "qnt": 1,
-      "produto": {
-        "imagem": "img2.png",
-        "id": "mRu5drSIIsy5Y2K1XVSj",
-        "nome": "Ração DogShow",
-        "preco": 11,
-        "descricao": [
-          "Qualidade 100%",
-          "Otimo Produto",
-          "Selo de Garantia!"
-        ]
-      }
-    }
-  ]
+  "cart": []
 }

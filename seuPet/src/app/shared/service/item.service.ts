@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Item} from '../model/item';
+import {map} from 'rxjs/operators';
+import {Produto} from '../model/produto';
 
 @Injectable({
   providedIn: 'root'
@@ -25,8 +27,8 @@ export class ItemService {
     return this.httpClient.delete(`${this.URL_PRODUTOSCART}/${id}`);
   }
 
-  pesquisarPorId(id: string): Observable<Item> {
-    return this.httpClient.get<Item>(`${this.URL_PRODUTOSCART}/${id}`);
+  pesquisarPorId(produto: Produto): Observable<Item []> {
+    return this.httpClient.get<Item []>(this.URL_PRODUTOSCART).pipe(map(i => i.filter(it => it.id === produto.id.toString())));
   }
 
   atualizar(item: Item, it: Item): Observable<Item> {
