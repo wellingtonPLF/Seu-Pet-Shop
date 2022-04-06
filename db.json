@@ -1,0 +1,64 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Usuario 1",
+      "cpf": "123",
+      "idade": 30
+    },
+    {
+      "id": 2,
+      "nome": "Usuario 2",
+      "cpf": "124",
+      "idade": 20
+    },
+    {
+      "id": 3,
+      "nome": "Usuario 3",
+      "cpf": "125",
+      "idade": 10
+    },
+    {
+      "nome": "well",
+      "cpf": "123",
+      "idade": "111",
+      "id": 4
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "imagem": "img1.png",
+      "nome": "Ração Pedigree",
+      "preco": 10,
+      "descricao": [
+        "Qualidade 100%",
+        "Otimo Produto",
+        "Selo de Garantia!"
+      ]
+    },
+    {
+      "id": 2,
+      "imagem": "img2.png",
+      "nome": "Ração DogShow",
+      "preco": 11,
+      "descricao": [
+        "Qualidade 100%",
+        "Otimo Produto",
+        "Selo de Garantia!"
+      ]
+    },
+    {
+      "id": 3,
+      "imagem": "img3.png",
+      "nome": "Ração Premier",
+      "preco": 12,
+      "descricao": [
+        "Qualidade 100%",
+        "Otimo Produto",
+        "Selo de Garantia!"
+      ]
+    }
+  ],
+  "cart": []
+}
